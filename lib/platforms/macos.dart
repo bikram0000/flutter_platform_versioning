@@ -71,7 +71,7 @@ Future<void> _setMacOSVersionInfoPlist(dynamic version) async {
       ..e('ERR Code: 255')
       ..e('macOS Version change failed!!!');
   } finally {
-    if (version != null) _logger.wtf(_minorTaskDoneLine);
+    if (version != null) _logger.f(_minorTaskDoneLine);
   }
 }
 
@@ -111,6 +111,6 @@ Future<void> _removeMacOSVersionInfoPlist() async {
       ..e('ERR Code: 255')
       ..e('macOS Version change failed!!!');
   } finally {
-    _logger.wtf(_minorTaskDoneLine);
+    _logger.f(_minorTaskDoneLine);
   }
 }

@@ -2,7 +2,7 @@ part of flutter_platform_versioning;
 
 // ! File Names
 // ? Root
-const _FPVConfigFileName = 'flutter_platform_versioning.yaml';
+const _fpvConfigFileName = 'flutter_platform_versioning.yaml';
 const _pubspecFileName = 'pubspec.yaml';
 
 // ? Android

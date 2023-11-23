@@ -1,6 +1,6 @@
 part of flutter_platform_versioning;
 
-const _FPVCommands = '''
+const _fpvCommands = '''
 ╔══════════════════════════════════════════════════════════════╗
 ║        Flutter Platform Versioning Commands                  ║
 ║  (Note: Linux and Web versioning not currently supported)    ║

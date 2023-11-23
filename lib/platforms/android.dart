@@ -74,7 +74,7 @@ Future<void> _setAndroidVersion(dynamic version) async {
       ..e('ERR Code: 255')
       ..e('Android Version change failed!!!');
   } finally {
-    if (version != null) _logger.wtf(_minorTaskDoneLine);
+    if (version != null) _logger.f(_minorTaskDoneLine);
   }
 }
 
@@ -121,7 +121,7 @@ Future<void> _setAndroidVersionGradleFile(dynamic version) async {
       ..e('ERR Code: 255')
       ..e('Android Version change failed!!!');
   } finally {
-    if (version != null) _logger.wtf(_minorTaskDoneLine);
+    if (version != null) _logger.f(_minorTaskDoneLine);
   }
 }
 
@@ -160,6 +160,6 @@ Future<void> _removeAndroidVersionGradleFile() async {
       ..e('ERR Code: 255')
       ..e('Android Version change failed!!!');
   } finally {
-     _logger.wtf(_minorTaskDoneLine);
+     _logger.f(_minorTaskDoneLine);
   }
 }

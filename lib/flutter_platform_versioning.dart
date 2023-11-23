@@ -160,7 +160,7 @@ Future<void> set(List<String> args) async {
 
     if (results.wasParsed('help') || results.arguments.isEmpty) {
       _logger
-        ..i(_FPVCommands)
+        ..i(_fpvCommands)
         ..i(parser.usage);
     }
   } on _FPVException catch (e) {
@@ -260,7 +260,7 @@ Future<void> _removeFlutterPlatformVersioning() async {
 }
 
 bool _configFileExists() {
-  final configFile = File(_FPVConfigFileName);
+  final configFile = File(_fpvConfigFileName);
   final pubspecFile = File(_pubspecFileName);
   return configFile.existsSync() || pubspecFile.existsSync();
 }
@@ -277,9 +277,9 @@ Future<Map<String, dynamic>> _getConfig({
     } else {
       throw _FPVErrors.filesNotFound;
     }
-  } else if (File(_FPVConfigFileName).existsSync()) {
-    await _checkConfigContent(_FPVConfigFileName);
-    yamlFile = File(_FPVConfigFileName);
+  } else if (File(_fpvConfigFileName).existsSync()) {
+    await _checkConfigContent(_fpvConfigFileName);
+    yamlFile = File(_fpvConfigFileName);
   } else {
     yamlFile = File(_pubspecFileName);
   }
@@ -311,9 +311,9 @@ Future<void> _changeYamlVersion({
     } else {
       throw _FPVErrors.filesNotFound;
     }
-  } else if (await File(_FPVConfigFileName).exists()) {
-    await _checkConfigContent(_FPVConfigFileName);
-    yamlFile = File(_FPVConfigFileName);
+  } else if (await File(_fpvConfigFileName).exists()) {
+    await _checkConfigContent(_fpvConfigFileName);
+    yamlFile = File(_fpvConfigFileName);
   } else {
     yamlFile = File(_pubspecFileName);
   }

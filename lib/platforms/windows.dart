@@ -78,7 +78,7 @@ VS_VERSION_INFO VERSIONINFO""");
       ..e('ERR Code: 255')
       ..e('Windows Version change failed!!!');
   } finally {
-    if (version != null) _logger.wtf(_minorTaskDoneLine);
+    if (version != null) _logger.f(_minorTaskDoneLine);
   }
 }
 
@@ -117,6 +117,6 @@ VS_VERSION_INFO VERSIONINFO"""),
       ..e('ERR Code: 255')
       ..e('Windows Version change failed!!!');
   } finally {
-    _logger.wtf(_minorTaskDoneLine);
+    _logger.f(_minorTaskDoneLine);
   }
 }
