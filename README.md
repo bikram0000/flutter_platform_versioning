@@ -67,7 +67,7 @@ flutter pub run flutter_platform_versioning:fpv --remove
 Set version for all platforms:
 
 ```bash
-flutter pub run flutter_platform_versioning:fpv --all --version=2.0.0+1
+flutter pub run flutter_platform_versioning:fpv --all 2.0.0+1
 ```
 
 Set version for a specific platform "Android" :
