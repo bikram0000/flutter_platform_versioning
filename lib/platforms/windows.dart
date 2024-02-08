@@ -56,15 +56,16 @@ Future<void> _setWindowsVersion(dynamic version) async {
           '#define VERSION_AS_STRING "$vNumber"',
         );
 
-    newProductDetailsRunnerString = newProductDetailsRunnerString
-        .replaceAll('VS_VERSION_INFO VERSIONINFO', """
+    if (!newProductDetailsRunnerString.contains('Generated from the FPV')) {
+      newProductDetailsRunnerString = newProductDetailsRunnerString
+          .replaceAll('VS_VERSION_INFO VERSIONINFO', """
 //
 // Generated from the FPV.
 //
 #define VERSION_AS_NUMBER ${vNumber.replaceAll('.', ',')}
 #define VERSION_AS_STRING "$vNumber"
 VS_VERSION_INFO VERSIONINFO""");
-
+    }
     await runnerFile.writeAsString(newProductDetailsRunnerString);
 
     _logger.i('Windows application version set to: `$vNumber` (Runner.rc)');
