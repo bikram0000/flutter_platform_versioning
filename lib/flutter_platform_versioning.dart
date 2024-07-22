@@ -126,7 +126,7 @@ Future<void> set(List<String> args) async {
     if (results.wasParsed('init')) {
       await initializeFlutterPlatformVersioning();
       _logger.i(_instruction);
-      exit(0);
+
     }
     if (results.wasParsed('remove')) {
       await _removeFlutterPlatformVersioning();
@@ -135,12 +135,11 @@ Future<void> set(List<String> args) async {
       await _removeMacOSVersionInfoPlist();
       await _removeWindowsVersion();
       _logger.i(_successfullyRemoved);
-      exit(0);
     }
     if (results.wasParsed('update')) {
       await _changeVersion(results);
       _logger.i(_successMessage);
-      exit(0);
+
     }
     final all = results['all'] as String?;
     if (all != null) {
@@ -154,7 +153,6 @@ Future<void> set(List<String> args) async {
       await _changeVersion(d);
       await _setVersionPubSpec(all);
       _logger.i(_successMessage);
-      exit(0);
     }
     await _changeVersion(results, checkAll: false);
 
