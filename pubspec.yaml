@@ -1,6 +1,6 @@
 name: flutter_platform_versioning
 description: Flutter Platform Versioning is a command-line tool to set different versions for different platforms in a Flutter project.
-version: 1.0.1
+version: 1.0.2
 repository: https://github.com/bikram0000/flutter_platform_versioning.git
 
 environment:
